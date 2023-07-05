@@ -56,6 +56,8 @@ void search_next_seq(vector<int>& a_vec, int& start_pos, long long& min_s, int k
         if (is_all_found(have_y_seen_the_k, k,current_found)) {
             min_s = min(min_s, current_s);
             reset_dict(have_y_seen_the_k);
+            // проход в обратном направлении(нужно, чтобы пропарсить отрезок с двух сторон по одному разу, а не парсить
+            // его слева направо много раз)
             current_found=0;
             current_s = 0;
             for (int j = i; j > start_pos-1;--j)

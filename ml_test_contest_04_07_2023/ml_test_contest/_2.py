@@ -29,7 +29,7 @@ def addone(indexes: np.array, pos_to_add: int, max_index: int) -> None:
 
 def adding_with_overflow(indexes, max_index):
     addone(indexes, len(indexes) - 1, max_index)
-
+    print(indexes)
 
 def calc_expectation(a_vec, k):
     placeholder = np.zeros(shape=(k,), dtype=np.intc)

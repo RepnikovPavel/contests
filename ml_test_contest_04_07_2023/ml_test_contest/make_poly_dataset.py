@@ -70,11 +70,12 @@ def f(p):
     x5 = p[4]
     return 1.0+ x1**2 +x2**2+x3**2+x4**2+x5**2+ x1*(x2+x3+x4+x5)
 
-X1 = np.random.uniform(-1.0,1.0,1000)
-X2 = np.random.uniform(-1.0,1.0,1000)
-X3 = np.random.uniform(-1.0,1.0,1000)
-X4 = np.random.uniform(-1.0,1.0,1000)
-X5 = np.random.uniform(-1.0,1.0,1000)
+N = 100000
+X1 = np.random.uniform(-1.0,1.0,N)
+X2 = np.random.uniform(-1.0,1.0,N)
+X3 = np.random.uniform(-1.0,1.0,N)
+X4 = np.random.uniform(-1.0,1.0,N)
+X5 = np.random.uniform(-1.0,1.0,N)
 
 # Y = np.linspace(-1.0,1.0,100)
 # X = np.linspace(-1.0,1.0,100)
@@ -86,11 +87,11 @@ for i in range(len(F)):
     o_str = str(X1[i]) + '\t' +str(X2[i]) +'\t'+str(X3[i]) +'\t'+str(X4[i]) +'\t'+str(X5[i]) +'\t' +str(F[i]) +'\n'
 
     ofstream.write(o_str)
-X1 = np.random.uniform(-1.0,1.0,1000)
-X2 = np.random.uniform(-1.0,1.0,1000)
-X3 = np.random.uniform(-1.0,1.0,1000)
-X4 = np.random.uniform(-1.0,1.0,1000)
-X5 = np.random.uniform(-1.0,1.0,1000)
+X1 = np.random.uniform(-1.0,1.0,N)
+X2 = np.random.uniform(-1.0,1.0,N)
+X3 = np.random.uniform(-1.0,1.0,N)
+X4 = np.random.uniform(-1.0,1.0,N)
+X5 = np.random.uniform(-1.0,1.0,N)
 for i in range(len(F)):
     o_str = str(X1[i]) + '\t' +str(X2[i]) +'\t'+str(X3[i]) +'\t'+str(X4[i]) +'\t'+str(X5[i]) + '\n'
 

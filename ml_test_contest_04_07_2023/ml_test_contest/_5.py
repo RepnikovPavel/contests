@@ -32,7 +32,7 @@ def func(x: np.array, params: np.array):
 if __name__ == '__main__':
     ifstream  = open('input.txt','r')
     ofstream  = open('output.txt','w')
-    N = 1000
+    N = 100000
     dim = 5
     X_train = np.zeros(shape=(N, dim),dtype=np.single)
     Y_train = np.zeros(shape=(N,), dtype = np.single)
@@ -42,7 +42,7 @@ if __name__ == '__main__':
             X_train[i][j] = np.single(line[j])
         Y_train[i] = np.single(line[-1])
     # params = np.ones(shape=(195,), dtype = np.single)
-    poly = PolynomialFeatures(degree=2, include_bias=False)
+    poly = PolynomialFeatures(degree=2, include_bias=True)
     poly_features = poly.fit_transform(X_train)
     poly_reg_model = LinearRegression()
     # poly_reg_model = odr.polynomial(2)

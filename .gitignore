@@ -5,5 +5,5 @@ main1
 .idea
 cpp
 _3
-__pycache__
+__pycache__/*
 
